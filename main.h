@@ -50,7 +50,9 @@ typedef struct parameters
 } params;
 
 /**
- * print_char: that print a character
+ * print_function - module
+ *
+ * print_char: that print a one character with %c
  * print a character: prints a %
  * print_string: ptints a string
  * print_int: prints int
@@ -67,7 +69,15 @@ typedef struct parameters
  * print_rot13: prints rot13'ed string
 */
 
-/* print_name */
+/*
+ * print_char - print character
+ *
+ * @params : is struct parameters frome typedef
+ * @ap : argument pointer
+ *
+ * Return: numbr chars printed
+*/
+
 int print_char(va_list ap, params *params);
 int print_percent(va_list ap, params *params);
 int print_string(va_list ap, params *params);
