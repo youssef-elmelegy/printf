@@ -84,4 +84,11 @@ int print_address(va_list ap, params *params); /* p */
 int print_rev(va_list ap, params *params); /* prints reversed specifier */
 int print_rot13(va_list ap, params *params); /* prints rot13'ed string */
 
+
+//print_sip.c file
+int print_char(va_list args, int count);
+int print_string(va_list args, int count);
+int print_number(va_list args, int count);
+
+int _putchar(char c);
 #endif
