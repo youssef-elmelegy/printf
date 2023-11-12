@@ -22,6 +22,7 @@ int _printf(const char *format, ...);
  *
  * @plus : on if plus specified
  * @space : on if _flag specified
+ * @hashtag : # flag
  * @zero : on if _flag specified
  * @minus : on if _flag specified
  *
@@ -67,25 +68,25 @@ typedef struct parameters
 */
 
 /* print_name */
-int print_char(va_list ap, params *params); /* print a character */
-int print_percent(va_list ap, params *params); /* prints a % */
-int print_string(va_list ap, params *params); /* ptints a string */
-int print_int(va_list ap, params *params); /* prints int */
-int print_S(va_list ap, params *params); /* S */
+int print_char(va_list ap, params *params);
+int print_percent(va_list ap, params *params);
+int print_string(va_list ap, params *params);
+int print_int(va_list ap, params *params);
+int print_S(va_list ap, params *params);
 
 int print_binary(va_list ap, params *params);
-int print_hex(va_list ap, params *params); /* x */
-int print_HEX(va_list ap, params *params); /* X */
-int print_octal(va_list ap, params *params); /* o */
+int print_hex(va_list ap, params *params);
+int print_HEX(va_list ap, params *params);
+int print_octal(va_list ap, params *params);
 
-int print_unsigned(va_list ap, params *params); /* u */
-int print_address(va_list ap, params *params); /* p */
+int print_unsigned(va_list ap, params *params);
+int print_address(va_list ap, params *params);
 
-int print_rev(va_list ap, params *params); /* prints reversed specifier */
-int print_rot13(va_list ap, params *params); /* prints rot13'ed string */
+int print_rev(va_list ap, params *params);
+int print_rot13(va_list ap, params *params);
 
 
-//print_sip.c file
+/* print_sip.c file */
 int print_char(va_list args, int count);
 int print_string(va_list args, int count);
 int print_number(va_list args, int count);
