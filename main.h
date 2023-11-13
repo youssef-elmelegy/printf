@@ -22,6 +22,16 @@ int print_number(va_list args, int count);
 
 /* _spacifiers.c file*/
 int all_spacifiers(char *format, va_list args, int count);
+int print_HEX(va_list args, int count);
+int print_hex(va_list args, int count);
+int print_octal(va_list args, int count);
+int print_unsign(va_list args, int count);
 
 int _putchar(char c);
+
+/* print_binary.c */
+int print_binary(va_list args, int count);
+
+
+
 #endif

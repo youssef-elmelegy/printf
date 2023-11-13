@@ -27,6 +27,8 @@ int all_spacifiers(char *format, va_list args, int count)
 			break;
 		case 'u':
 			count = print_unsign(args, count);
+		case 'b':
+			count = print_binary(args, count);
 			break;
 		case 'o':
 			count = print_octal(args, count);
