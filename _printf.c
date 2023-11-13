@@ -20,7 +20,25 @@ int _printf(const char *format, ...)
 		if (*format == '%' && *(format + 1))
 		{
 			format++;
-			count = all_spacifiers(format, args, count);
+			switch (*format)
+			{
+				case 'c':
+					count = print_char(args, count);
+					break;
+				case 's':
+					count = print_string(args, count);
+					break;
+				case '%':
+					count += _putchar('%');
+					break;
+				case 'd':
+				case 'i':
+					count = print_number(args, count);
+					break;
+				default:
+					count += _putchar('%') + _putchar(*format);
+					break;
+			}
 		}
 		else
 			count += _putchar(*format);
