@@ -21,7 +21,7 @@ int print_string(va_list args, int count);
 int print_number(va_list args, int count);
 
 /* _spacifiers.c file*/
-int all_spacifiers(char *format, va_list args, int count);
+int all_spacifiers(const char *format, va_list args, int count);
 int print_HEX(va_list args, int count);
 int print_hex(va_list args, int count);
 int print_octal(va_list args, int count);

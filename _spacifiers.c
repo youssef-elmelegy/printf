@@ -8,7 +8,7 @@
  * Return: count
  */
 
-int all_spacifiers(char *format, va_list args, int count)
+int all_spacifiers(const char *format, va_list args, int count)
 {
 	switch (*format)
 	{
@@ -27,6 +27,7 @@ int all_spacifiers(char *format, va_list args, int count)
 			break;
 		case 'u':
 			count = print_unsign(args, count);
+			break;
 		case 'b':
 			count = print_binary(args, count);
 			break;
@@ -56,9 +57,6 @@ int print_unsign(va_list args, int count)
 	unsigned int num = va_arg(args, unsigned int);
 	unsigned int temp = 1;
 
-	char buffer[BUFFER_SIZE];
-	char *ptr = buffer;
-
 	while (num / temp >= 10)
 	{
 		temp *= 10;
@@ -66,14 +64,12 @@ int print_unsign(va_list args, int count)
 
 	while (temp)
 	{
-		*ptr++ = (num / temp) + '0';
+		count += _putchar((num / temp) + '0');
 		num %= temp;
 		temp /= 10;
 	}
-	count += _write_buffer(buffer, ptr - buffer);
 	return (count);
 }
-
 /**
  * print_octal - print an octal number
  * @args: The argument list
