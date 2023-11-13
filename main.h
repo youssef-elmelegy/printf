@@ -20,5 +20,8 @@ int print_char(va_list args, int count);
 int print_string(va_list args, int count);
 int print_number(va_list args, int count);
 
+/* _spacifiers.c file*/
+int all_spacifiers(char *format, va_list args, int count);
+
 int _putchar(char c);
 #endif
