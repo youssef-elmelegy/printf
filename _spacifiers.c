@@ -27,7 +27,7 @@ int all_spacifiers(char *format, va_list args, int count)
 			break;
 
 		case 'b':
-			count = print_octal(args, count);
+			count = print_binary(args, count);
 			break;
 		case 'o':
 			count = print_octal(args, count);
