@@ -24,4 +24,8 @@ int print_number(va_list args, int count);
 int all_spacifiers(char *format, va_list args, int count);
 
 int _putchar(char c);
+
+/* print_binary.c */
+int print_binary(va_list args,int count)
+
 #endif

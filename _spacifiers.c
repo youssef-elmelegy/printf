@@ -25,6 +25,10 @@ int all_spacifiers(char *format, va_list args, int count)
 		case 'i':
 			count = print_number(args, count);
 			break;
+
+		case 'b':
+			count = print_octal(args, count);
+			break;
 		case 'o':
 			count = print_octal(args, count);
 			break;
